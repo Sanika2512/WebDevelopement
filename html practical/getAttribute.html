@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setAttribute Example</title>
+</head>
+<body>
+
+    <a id="myLink" href="https://google.com">Google</a>
+    <button onclick="changeAndGo()">Change & Go to YouTube</button>
+
+    <script>
+        function changeAndGo() {
+            let link = document.querySelector("#myLink");
+            link.setAttribute("href", "https://youtube.com"); // Change link
+            window.location.href = link.getAttribute("href"); // Automatically go to YouTube
+        }
+    </script>
+
+</body>
+</html>

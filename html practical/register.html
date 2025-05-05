@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #f4f4f4; }
+        .container { width: 400px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; }
+        h2 { margin-bottom: 20px; }
+        input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        .gender-group { display: flex; justify-content: center; gap: 15px; }
+        .gender-option { display: flex; align-items: center; gap: 3px; }
+        button { width: 100%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #218838; }
+        .link { margin-top: 15px; font-size: 14px; }
+        .link a { color: #007bff; text-decoration: none; }
+        .link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form action="login.html">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" required>
+            <label>Gender:</label>
+            <div class="gender-group">
+                <div class="gender-option"><input type="radio" name="gender"> Male</div>
+                <div class="gender-option"><input type="radio" name="gender"> Female</div>
+            </div>
+            <select required>
+                <option value="">Select Education Qualification</option>
+                <option value="btech">BTech</option>
+                <option value="mtech">MTech</option>
+            </select>
+            <textarea placeholder="Address" rows="3" required></textarea>
+            <button type="submit">Register</button>
+        </form>
+        <p class="link">Already registered? <a href="login.html">Login</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .left-side {
+            flex: 1;
+            background-image: url('abc.png.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 938px;
+        }
+
+        .right-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 255, 204);
+        }
+
+        fieldset {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 600px;
+            background-color: rgb(255, 255, 204);
+        }
+
+        legend {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 5px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .form-container {
+            padding: 30px;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 18px;
+            margin: 10px 0;
+            display: block;
+            text-align: left;
+        }
+
+        input, select, textarea {
+            font-size: 16px;
+            padding: 8px;
+            width: 100%;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        .gender-group {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between Male and Female groups */
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 3px; /* Minimized space between radio button & text */
+        }
+
+        input[type="submit"] {
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            display: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="form-container" id="formContainer">
+                <h2>Registration Form</h2>
+                <fieldset>
+                    <legend>Form</legend>
+                    <form id="registrationForm">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone number:</label>
+                        <input type="text" id="phone" name="phone" required>
+
+                        <label>Gender:</label>
+                        <div class="gender-group">
+                            <div class="gender-option">
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+
+                        <label for="education">Education Qualification:</label>
+                        <select id="education" name="education" required>
+                            <option value="mtech">MTech</option>
+                            <option value="btech">BTech</option>
+                            <option value="mca">MCA</option>
+                            <option value="bca">BCA</option>
+                            <option value="mba">MBA</option>
+                        </select>
+
+                        <label for="college">Select College:</label>
+                        <select id="college" name="college" required>
+                            <option value="dy-patil-kolhapur">D.Y. Patil College of Engineering & Technology Kolhapur</option>
+                            <option value="iitt-bombay">IIT Bombay</option>
+                            <option value="coep-pune">College of Engineering Pune (COEP)</option>
+                            <option value="vjti-mumbai">VJTI Mumbai</option>
+                            <option value="walchand-sangli">Walchand College of Engineering, Sangli</option>
+                            <option value="mit-wpu-pune">MIT World Peace University (MIT-WPU)</option>
+                            <option value="kjsce-mumbai">KJSCE Mumbai</option>
+                            <option value="pict-pune">Pune Institute of Computer Technology (PICT)</option>
+                            <option value="KIT college of Engineering kolhapur">KIT College of Engineering Kolhapur</option>
+                            <option value="RIT college of Engineering sangli">RIT College of Engineering Sangli</option>
+                            <option value="KBP college of Engineering satara">KBP College of Engineering Satara</option>
+                        </select>
+
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="4" required></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </fieldset>
+                <p class="success-message" id="successMessage">You registered successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            document.getElementById("formContainer").innerHTML = '<h2 style="color:green; text-align:center; font-size:24px;">You registered successfully!</h2>';
+        });
+    </script>
+</body>
+</html>
