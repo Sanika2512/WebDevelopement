@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<students>
+  <student>
+    <roll>101</roll>
+    <name>Riya Patil</name>
+    <department>Computer Science</department>
+    <marks>88</marks>
+    <city>Kolhapur</city>
+  </student>
+  <student>
+    <roll>102</roll>
+    <name>Akash Deshmukh</name>
+    <department>Electronics</department>
+    <marks>79</marks>
+    <city>Pune</city>
+  </student>
+  <student>
+    <roll>103</roll>
+    <name>Sneha Joshi</name>
+    <department>Information Technology</department>
+    <marks>91</marks>
+    <city>Nagpur</city>
+  </student>
+  <student>
+    <roll>104</roll>
+    <name>Rohit Kulkarni</name>
+    <department>Mechanical</department>
+    <marks>74</marks>
+    <city>Sangli</city>
+  </student>
+  <student>
+    <roll>105</roll>
+    <name>Priya Shinde</name>
+    <department>Civil</department>
+    <marks>82</marks>
+    <city>Satara</city>
+  </student>
+</students>
